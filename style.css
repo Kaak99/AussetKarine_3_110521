@@ -1,0 +1,105 @@
+/*-----------------*/
+/*---           ---*/
+/*-----------------*/
+
+
+
+/*commentaire*/
+
+
+
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.d-flex{display: flex;}
+
+h1{
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 0.8em;
+}
+
+h2{
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 0.8em;
+}
+
+h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 0.8em;
+}
+
+h4{
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 0.8em;
+}
+	
+a{text-decoration: none;}
+
+li{list-style: none;}
+
+
+	
+/* <!---------------------------- BODY ----------------------------> */
+
+body{
+    background-color:white ;
+	color: black;
+    font-family: 'Raleway', sans-serif;
+    max-width: 1400px;
+    margin: 0 auto;
+	border: solid 1px red;
+}
+
+/*<!------------------------------HEADER----------------> */
+
+/*<!--  logo (...)-->*/
+
+/*<!--  headernav (...)-->*/
+
+/*<!------------------------------MAIN----------------> */
+
+/*<!--  banner (...)-->*/
+
+/*<!--  section (...)-->*/
+
+/*<!--  article (...)-->*/
+
+/*<!--  aside  (...)-->*/
+
+
+/*<!------------------------------ FOOTER -------------------------------->*/
+
+
+
+
+
+/*________________________________responsive _______ @media___________________________________________*/
+
+
+
+@media all and (max-width: 1200px) and (min-width:600px)
+{
+    /*general*/
+	/*header*/
+	/*main*/
+	/*footer*/
+}
+
+@media all and (max-width: 600px)
+{	/*general*/
+	/*header*/
+	/*main*/
+	/*footer*/
+
+}
