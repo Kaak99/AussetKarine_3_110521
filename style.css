@@ -80,6 +80,17 @@ body{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 20%);
 }
 
+#logoMenus{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 14% 15px 0;
+}
+
+
+#logoMenus i{
+font-size: 1.4rem;
+}
 
 /*<!------------------------------MAIN----------------> */
 
@@ -133,7 +144,7 @@ body{
 }
 
 /*<!--  section howItWorks-->*/
-h2{
+#howItWorks h2{
     padding: 20px 20px;
       
 }
@@ -243,6 +254,74 @@ display: none;
 }
 
 
+/*<!-- ----  section MENU#.HTML (menu1 menu2 menu3 menu4)---  -->*/
+
+.restaurantCard img{
+    width: 100%;
+}
+
+.restaurantCard{
+    width:100%;
+}
+
+.restaurant__Name{
+    background-color: white;
+    justify-content: space-evenly;
+    padding:40px 0px;
+    margin-top: -52px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+    z-index: 1;
+
+}
+.restaurant__Name h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.8rem;
+    font-weight: 100;
+    /*text-align: center;*/
+}
+
+
+
+.restaurantCard h2{
+    font-weight: 100;
+    font-size: 1.1rem;
+    text-transform: uppercase;  
+    margin-left: 15px;
+
+}
+
+.surlignBox{
+width:45px;
+height:3px;
+background-color: #99E2D0;
+margin: 8px 0 10px 15px;
+}
+
+.restaurant__meal{
+    margin: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 20%);  
+}
+
+.order{
+    display: block;
+    text-align: center;
+    color:white;
+    font-size: 1rem;
+    font-weight: 600;
+    width:200px;
+    margin: 50px auto;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 20%);  
+    background: linear-gradient(to bottom right,#FF79DA,#9356DC);
+    cursor: pointer;
+}
+
+
 /*<!------------------------------ FOOTER -------------------------------->*/
 footer{
     background-color: #292421;  
@@ -275,10 +354,12 @@ footer .fa-hands-helping{
 
 .loader h4{
     font-family: 'Shrikhand', cursive;
-    color:#9356DC;
+    color:rgba(147, 112, 219, 75%);
     font-size: 1.6rem;
     text-align: center;
     line-height: 10rem;
+    text-shadow: #d8f3ec 0px 2px 10px;
+    /*text-shadow: 1px 1px 2px #FF79DA, 0 0 1em #99E2D0, 0 0 0.2em #99E2D0;*/
     
 }
 .loader {
