@@ -67,8 +67,12 @@ body{
 }
 
 .indexNoLoader{
-    /*z-index: 999999;*/   
+    /*z-index: 2;  */
+    overflow: hidden;
 }
+
+
+
 
 /*<!------------------------------HEADER----------------> */
 
@@ -321,16 +325,63 @@ margin: 8px 0 10px 15px;
 
 .restaurant__meal{
     height: 70px;
-    /*overflow-wrap: break-word ;
+    justify-content: space-between;
     overflow: hidden;
-    text-overflow: ellipsis;*/
+ 
 
     margin: 0px 15px 15px 15px;
-    padding: 12px;
+    /* padding: 12px; */
     border-radius: 20px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 20%); 
     cursor: pointer; 
+    animation: apparition 400ms linear backwards;
 }
+
+@keyframes apparition{
+    0%{
+        opacity:0%;
+        transform:translateY(10px)
+    }
+    60%{
+        opacity:50%;
+        transform:translateY(2px)
+    }
+    100%{
+    opacity:100%;
+    transform:translateY(0)
+    }
+}
+
+.restaurant__Starter .restaurant__meal:nth-child(3){
+    animation-delay: 100ms;
+}
+.restaurant__Starter .restaurant__meal:nth-child(4){
+    animation-delay: 200ms;
+}
+.restaurant__Starter .restaurant__meal:nth-child(5){
+    animation-delay: 300ms;
+}
+
+.restaurant__MainDish .restaurant__meal:nth-child(3){
+    animation-delay: 600ms;
+}
+.restaurant__MainDish .restaurant__meal:nth-child(4){
+    animation-delay: 700ms;
+}
+.restaurant__MainDish .restaurant__meal:nth-child(5){
+    animation-delay: 800ms;
+}
+
+.restaurant__Dessert .restaurant__meal:nth-child(3){
+    animation-delay: 1100ms;
+}
+.restaurant__Dessert .restaurant__meal:nth-child(4){
+    animation-delay: 1200ms;
+}
+.restaurant__Dessert .restaurant__meal:nth-child(5){
+    animation-delay: 1300ms;
+}
+
 
 .meal__Description>p{
     line-height: 1.7rem;
@@ -341,15 +392,53 @@ margin: 8px 0 10px 15px;
     justify-content: space-between;
     }
 
+.meal__Description1 {
+    padding: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+.meal__Description2 {
+        justify-content:flex-end;
+        /* align-items:flex-end; */
+        }
+
+
+
 .price{
+     /*height: 100%;
+       height: 32px; */
     font-weight: 600;
+    padding: 40px 10px 0px 10px;
     /*position: relative;*/
     /*z-index: 2; */
-   padding-left: 8px;
-   margin-right: 8px;
-   height: 32px;
+   /* padding-left: 8px;
+   margin-right: 8px; 
+   justify-self: flex-end;
+   text-align:end;*/
+
 }
 
+.fa-check{
+    font-size: 1.4rem;
+    border-radius: 25px;
+    color:#99E2D0;
+    background-color: white;
+    padding: 5px;
+    text-align: center;
+}
+.checkBox{
+    height: 100%;
+    /* justify-self: center; */
+    padding: 20px;
+    background-color: #99E2D0;
+}
+/* .checkSpan{
+    
+    justify-self:center;
+    padding: 15px;
+    background-color: #99E2D0;
+} */
 /*.price::before{
     content: "...   ";
     background-color: #FFBA10;
@@ -415,6 +504,9 @@ footer .fa-hands-helping{
 
 /*<!---------************------------- LOADER --------************----------------->*/
 
+
+
+
 .loader h4{
     font-family: 'Shrikhand', cursive;
     color:rgba(147, 112, 219, 75%);
@@ -433,12 +525,34 @@ footer .fa-hands-helping{
     left: 0;
     right: 0;
     top: 0;
-    /*z-index: 99999;*/
-    display: none;
+    /*display: none;*/
     overflow: hidden;
     position: fixed;
+    z-index: 999999;  
+    animation: loaderLife 4s linear forwards; 
 
 }
+
+@keyframes loaderLife{
+    0%{
+        opacity:1;
+        transform:translateY(0)
+    }
+
+    98%{
+        opacity:1;
+        transform:translateY(0)
+    }
+    99%{
+        opacity:0;
+        transform:translateY(0)
+    }
+    100%{
+        opacity:0;
+        transform:translateY(-100vh)
+    }
+}
+
 
 .loader-inner {
     bottom: 0;
@@ -522,15 +636,6 @@ footer .fa-hands-helping{
 }
 
 
-/*.exit {
-            animation: exit 3s ease-out both;
-}
-*/
-/*
-@keyframes exit {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}*/
 
 
 /*________________________________responsive _______ @media___________________________________________*/
