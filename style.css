@@ -3,7 +3,6 @@
 /*-----------------*/
 
 
-
 /*commentaire*/
 
 
@@ -25,7 +24,6 @@ h1{
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.6rem;
-    
 }
 
 h2{
@@ -67,7 +65,6 @@ body{
 }
 
 .indexNoLoader{
-    /*z-index: 2;  */
     overflow: hidden;
 }
 
@@ -109,10 +106,8 @@ font-size: 1.4rem;
  }
  .searchForm i{
  padding: 10px 15px 15px 80px;
-
  }
  
-
  .searchForm form input{
      background-color:#eaeaea;
      padding: 10px 5px 15px 5px;
@@ -123,7 +118,6 @@ font-size: 1.4rem;
 /*<!--  section headline-->*/
 .headline{
     flex-direction: column;
-    /*justify-content: center;*/
     align-items: center;
     padding: 30px 0 50px 0;
     background-color:#f6f6f6;
@@ -164,7 +158,6 @@ margin-bottom: 40px;
 }
 
 #howItWorks ol li{
-    /*background-color: slategray;*/
     padding: 25px 30px;
     margin: 10px 30px;
     border-radius: 25px;
@@ -176,7 +169,6 @@ margin-bottom: 40px;
 
     background-color: #9356DC;
     color: white;
-    /*font-size: 0.9rem;*/
     padding: 3px 8px;
     border-radius: 50%;
     margin-right: 5px;
@@ -205,11 +197,8 @@ margin-bottom: 40px;
 
 #restaurantsList{
     flex-direction: column;
-    /*justify-content: center;
-    align-content: center;*/
     align-items: center;
     flex-wrap: wrap;
-    /*flex-wrap: wrap;*/
 }
 
 #restaurants figure{
@@ -262,21 +251,28 @@ display: none;
     font-size: 1.6rem;
     font-weight: 100;
     margin-right: 20px;
+    color: #9356DC;
+    display: block;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 
-.fas.fa-heart{
+
+/*.fas.fa-heart{
 color:linear-gradient(to bottom right,#FF79DA,#9356DC);
-/*background: linear-gradient(to bottom right,#FF79DA,#9356DC);*/
+}*/
 
-}
 
-.far.fa-heart{
-/*color:violet;
-background: linear-gradient(to bottom right,#FF79DA,#9356DC);*/
+
+/*.far.fa-heart{
+color:violet;
+background: linear-gradient(to bottom right,#FF79DA,#9356DC);
 color:linear-gradient(to bottom right,#FF79DA,#9356DC);
-
-}
+}*/
 
 /*<!-- ----  section MENU#.HTML (menu1 menu2 menu3 menu4)---  -->*/
 
@@ -303,9 +299,7 @@ color:linear-gradient(to bottom right,#FF79DA,#9356DC);
     font-family: 'Shrikhand', cursive;
     font-size: 1.8rem;
     font-weight: 100;
-    /*text-align: center;*/
 }
-
 
 
 .restaurantCard h2{
@@ -313,110 +307,51 @@ color:linear-gradient(to bottom right,#FF79DA,#9356DC);
     font-size: 1.1rem;
     text-transform: uppercase;  
     margin-left: 15px;
-
 }
 
 .surlignBox{
-width:45px;
-height:3px;
-background-color: #99E2D0;
-margin: 8px 0 10px 15px;
+    width:45px;
+    height:3px;
+    background-color: #99E2D0;
+    margin: 8px 0 10px 15px;
 }
 
 .restaurant__meal{
     height: 70px;
     justify-content: space-between;
     overflow: hidden;
- 
-
     margin: 0px 15px 15px 15px;
     /* padding: 12px; */
     border-radius: 20px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 20%); 
     cursor: pointer; 
-    animation: apparition 400ms linear backwards;
+    animation: apparition 400ms linear backwards;/*all menu appears with delai for each*/
 }
-
-@keyframes apparition{
-    0%{
-        opacity:0%;
-        transform:translateY(10px)
-    }
-    60%{
-        opacity:50%;
-        transform:translateY(2px)
-    }
-    100%{
-    opacity:100%;
-    transform:translateY(0)
-    }
-}
-
-.restaurant__Starter .restaurant__meal:nth-child(3){
-    animation-delay: 100ms;
-}
-.restaurant__Starter .restaurant__meal:nth-child(4){
-    animation-delay: 200ms;
-}
-.restaurant__Starter .restaurant__meal:nth-child(5){
-    animation-delay: 300ms;
-}
-
-.restaurant__MainDish .restaurant__meal:nth-child(3){
-    animation-delay: 600ms;
-}
-.restaurant__MainDish .restaurant__meal:nth-child(4){
-    animation-delay: 700ms;
-}
-.restaurant__MainDish .restaurant__meal:nth-child(5){
-    animation-delay: 800ms;
-}
-
-.restaurant__Dessert .restaurant__meal:nth-child(3){
-    animation-delay: 1100ms;
-}
-.restaurant__Dessert .restaurant__meal:nth-child(4){
-    animation-delay: 1200ms;
-}
-.restaurant__Dessert .restaurant__meal:nth-child(5){
-    animation-delay: 1300ms;
-}
-
-
-.meal__Description>p{
-    line-height: 1.7rem;
- 
-}
-
-.meal__Description {
-    justify-content: space-between;
-    }
 
 .meal__Description1 {
-    padding: 15px;
+    padding: 15px 0 15px 15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    background-color:turquoise;
+    width:100%;
     }
 .meal__Description2 {
-        justify-content:flex-end;
-        /* align-items:flex-end; */
-        }
+    transform: translateX(72px);
+    /* transform: translateX(72px); */
+    background-color: tomato;
+    /* transition: transform 2s linear; */
+    }
 
+    /* .meal__Description2:hover {
+    transform: translateX(-10px); 
 
+        } */
 
 .price{
-     /*height: 100%;
-       height: 32px; */
+
     font-weight: 600;
     padding: 40px 10px 0px 10px;
-    /*position: relative;*/
-    /*z-index: 2; */
-   /* padding-left: 8px;
-   margin-right: 8px; 
-   justify-self: flex-end;
-   text-align:end;*/
-
 }
 
 .fa-check{
@@ -426,27 +361,31 @@ margin: 8px 0 10px 15px;
     background-color: white;
     padding: 5px;
     text-align: center;
+    transition: transform 500ms linear;
+
 }
+
+.fa-check:hover{
+transform: rotate(1turn);
+} 
+
+
 .checkBox{
     height: 100%;
     /* justify-self: center; */
     padding: 20px;
     background-color: #99E2D0;
+    /*transition: transform 500ms linear;*/
+    overflow: hidden;
+    /* display: none; */
 }
-/* .checkSpan{
-    
-    justify-self:center;
-    padding: 15px;
-    background-color: #99E2D0;
-} */
-/*.price::before{
-    content: "...   ";
-    background-color: #FFBA10;
 
-.restaurant__MainDish .meal__Txt::after{
-    content: "...";
-    background-color: #FFBA10; 
-}*/
+/* .checkBox:hover{
+    transform: rotate(1turn);
+    transform:translateX(10rem);
+    } */
+
+
 
 .meal__Txt{
     height: 32px;
@@ -474,6 +413,58 @@ margin: 8px 0 10px 15px;
 .order:hover{
 
 }
+
+
+
+/* @ @ @ @ @ anim menu:start @ @ @ @ @ */
+
+
+@keyframes apparition{
+    0%{
+        opacity:0%;
+        transform:translateY(10px)
+    }
+    60%{
+        opacity:50%;
+        transform:translateY(2px)
+    }
+    100%{
+    opacity:100%;
+    transform:translateY(0)
+    }
+}
+
+.restaurant__Starter .restaurant__meal:nth-child(3){/*starters arrive*/
+    animation-delay: 100ms;
+}
+.restaurant__Starter .restaurant__meal:nth-child(4){
+    animation-delay: 200ms;
+}
+.restaurant__Starter .restaurant__meal:nth-child(5){
+    animation-delay: 300ms;
+}
+.restaurant__MainDish .restaurant__meal:nth-child(3){/*mainDish arrive*/
+    animation-delay: 600ms;
+}
+.restaurant__MainDish .restaurant__meal:nth-child(4){
+    animation-delay: 700ms;
+}
+.restaurant__MainDish .restaurant__meal:nth-child(5){
+    animation-delay: 800ms;
+}
+.restaurant__Dessert .restaurant__meal:nth-child(3){/*dessert arrive*/
+    animation-delay: 1100ms;
+}
+.restaurant__Dessert .restaurant__meal:nth-child(4){
+    animation-delay: 1200ms;
+}
+.restaurant__Dessert .restaurant__meal:nth-child(5){
+    animation-delay: 1300ms;
+}
+
+
+
+/* @ @ @ @ @ anim:end @ @ @ @ @ */
 
 /*<!------------------------------ FOOTER -------------------------------->*/
 footer{
@@ -529,7 +520,7 @@ footer .fa-hands-helping{
     overflow: hidden;
     position: fixed;
     z-index: 999999;  
-    animation: loaderLife 4s linear forwards; 
+    animation: loaderLife 1s linear forwards; 
 
 }
 
