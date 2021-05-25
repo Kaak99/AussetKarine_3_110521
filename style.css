@@ -238,41 +238,111 @@ margin-bottom: 20px;
     font-size: 0.9rem;
     font-weight: 600;
     color:#008080;
-
+    
 }
 
 #restaurants  .newLabel:nth-child(3) {
 display: none;
 
 }
+/* ne pas passer le vide en position absolute car va dessus mais reste transparent : impossible de l'afficher sans voir le plein*/
 
-.fa-heart{
+
+.hearts {
+    color:black;
+    font-size:1.7rem;
+    font-weight:100;
+    opacity:1;
+    position: relative ;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .hearts .far.fa-heart{/*levide*/
+    /*position: absolute; non*/
     
+    opacity:1;
+  }
+  
+  .hearts .fas.fa-heart{/*leplein*/
+    background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
+    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  
+   position: absolute;
+    opacity:0;
+    left:0px ;
+    top:2px ;
+  }
+  
+  .hearts .fas.fa-heart:hover{/*leplein*/
+      animation: fasUP 1s both ;
+  }
+  
+  @keyframes fasUP{
+    20%{opacity:0.5;}
+    100%{opacity:1;}
+  }
+  
+
+  /* .hearts:hover .far.fa-heart{
+      animation: farDown 200ms forwards ;
+  }
+  @keyframes farDown{
+    
+     0%{transform: translateX(0px);opacity:1;}
+      90%{transform: translateX(0px);opacity:0;} 
+       100%{transform: translateX(50px);opacity:0;}
+  } */
+
+
+
+/*
+
+.hearts{
+    position: relative;
+    cursor: pointer;
     font-size: 1.6rem;
     font-weight: 100;
     margin-right: 20px;
-    color: #9356DC;
-    display: block;
-    background: -webkit-linear-gradient(#9356DC, #FF79DA);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 
+ .far.fa-heart {
+    transition: opacity 200ms; 
+    opacity: 1;
+} 
 
-/*.fas.fa-heart{
-color:linear-gradient(to bottom right,#FF79DA,#9356DC);
-}*/
+.fas.fa-heart {
+    cursor: pointer;
+    position: absolute;
+    left:1px;
+    top: 1px;
+    color: #FF79DA;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0,.59,.03,.53); 
+
+  }
 
 
+  .hearts:hover .fas.fa-heart{
+    background: -webkit-linear-gradient(0deg, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+         transform: scale(1.11); 
+  } 
 
-/*.far.fa-heart{
-color:violet;
-background: linear-gradient(to bottom right,#FF79DA,#9356DC);
-color:linear-gradient(to bottom right,#FF79DA,#9356DC);
-}*/
+  .hearts:hover .far.fa-heart{
+    opacity: 0;
+  }
+  */
+
+
 
 /*<!-- ----  section MENU#.HTML (menu1 menu2 menu3 menu4)---  -->*/
 
@@ -385,7 +455,10 @@ transform: rotate(1turn);
     transform:translateX(10rem);
     } */
 
-
+    .meal__Title{
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
 .meal__Txt{
     height: 32px;
