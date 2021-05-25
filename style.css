@@ -388,7 +388,6 @@ display: none;
 
 .restaurant__meal{
     height: 70px;
-    justify-content: space-between;
     overflow: hidden;
     margin: 0px 15px 15px 15px;
     /* padding: 12px; */
@@ -403,20 +402,22 @@ display: none;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    background-color:turquoise;
+    /* background-color:turquoise; */
     width:100%;
     }
 .meal__Description2 {
-    transform: translateX(72px);
+    position:relative;
+    left: 66px;
+  justify-content: center;
     /* transform: translateX(72px); */
-    background-color: tomato;
+    /* background-color: tomato; */
     /* transition: transform 2s linear; */
     }
 
-    /* .meal__Description2:hover {
-    transform: translateX(-10px); 
+    .meal__Description2:hover {
+    transform: translateX(-66px); 
 
-        } */
+        } 
 
 .price{
 
@@ -425,12 +426,13 @@ display: none;
 }
 
 .fa-check{
-    font-size: 1.4rem;
+    font-size: 1rem;
     border-radius: 25px;
     color:#99E2D0;
     background-color: white;
     padding: 5px;
     text-align: center;
+    
     transition: transform 500ms linear;
 
 }
