@@ -406,17 +406,21 @@ display: none;
     width:100%;
     }
 .meal__Description2 {
-    position:relative;
-    left: 66px;
+    /* position:relative;
+    left: 66px; */
   justify-content: center;
     /* transform: translateX(72px); */
     /* background-color: tomato; */
     /* transition: transform 2s linear; */
     }
 
-    .meal__Description2:hover {
-    transform: translateX(-66px); 
-
+    .meal__Description2:hover .checkBox{
+    /* transform: translateX(-66px);  */
+    width: 70px;
+    height: 100%;
+   
+    padding: 20px;
+    background-color: #99E2D0;
         } 
 
 .price{
@@ -426,6 +430,7 @@ display: none;
 }
 
 .fa-check{
+   
     font-size: 1rem;
     border-radius: 25px;
     color:#99E2D0;
@@ -437,18 +442,16 @@ display: none;
 
 }
 
-.fa-check:hover{
+.meal__Description2:hover .fa-check{
 transform: rotate(1turn);
 } 
 
 
 .checkBox{
-    height: 100%;
-    /* justify-self: center; */
-    padding: 20px;
-    background-color: #99E2D0;
+    width: 0;
+
     /*transition: transform 500ms linear;*/
-    overflow: hidden;
+    /* overflow: hidden; */
     /* display: none; */
 }
 
