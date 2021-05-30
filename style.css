@@ -66,6 +66,7 @@ body{
 
 .indexNoLoader{
     overflow: hidden;
+    cursor: default;
 }
 
 
@@ -138,8 +139,13 @@ font-size: 1.4rem;
     color: white;
     border-radius: 35px;
     font-size: 0.9rem;
+    transition: box-shadow 300ms ease-in-out;
 }
 
+.headline .button:hover{
+    background: linear-gradient(to bottom right,rgba(255,121,218,0.9),rgba(147,86,220,0.9));
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 40%);
+}
 
 /*<!--  section howItWorks-->*/
 #howItWorks h2{
@@ -158,6 +164,13 @@ margin-bottom: 40px;
     border-radius: 25px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 18%);
     position: relative;
+    cursor: default;
+}
+#howItWorks ol li:hover{
+    background-color:#f5edff;
+}
+#howItWorks ol li:hover i{
+    color:#9356DC;
 }
 
 #howItWorks ol li span{
@@ -228,12 +241,24 @@ margin-bottom: 40px;
     font-size: 0.9rem;
     font-weight: 600;
     color:#008080;
+    animation: newFlash 1s infinite;
 }
 
-#restaurants  .newLabel:nth-child(3) {
-    display: none;
+@keyframes newFlash{
+    0%{opacity:100% }
+    40%{opacity:67% }
+    100%{opacity:100% }
 }
-/* ne pas passer le vide en position absolute car va dessus mais reste transparent : impossible de l'afficher sans voir le plein*/
+
+#restaurantsList a:nth-child(3) .newLabel, #restaurantsList a:nth-child(4) .newLabel{
+    display: none; 
+}
+/* #restaurants  .newLabel:nth-child(3) {
+    display: none;
+} */
+
+/* ne pas passer le vide (empty heart) en position absolute car va dessus mais reste transparent :
+ IMPOSSIBLE de l'afficher sans voir le plein dessous. Donc passer l'autre en absolute*/
 
 
 .hearts {
@@ -276,6 +301,8 @@ margin-bottom: 40px;
 
 .restaurantCard img{
     width: 100%;
+    height: 254px;
+    object-fit: cover;
 }
 
 .restaurantCard{
@@ -324,7 +351,7 @@ margin-bottom: 40px;
 }
 
 .meal__Description1 {
-    padding: 15px 0 15px 15px;
+    padding: 15px 0 15px 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -336,7 +363,7 @@ margin-bottom: 40px;
 
 .price{
     font-weight: 600;
-    padding: 40px 10px 0px 10px;
+    padding: 40px 9px 0px 9px;
 }
 
 .checkBox{
@@ -346,7 +373,7 @@ margin-bottom: 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    transition: all 1s ease-in-out;
+    transition: all 700ms ease-in-out;
 }
 
 .restaurant__meal:hover .checkBox{
@@ -359,7 +386,7 @@ margin-bottom: 40px;
 } 
 
 .fa-check{
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 1rem;
     border-radius: 25px;
     color:#99E2D0;
@@ -367,7 +394,7 @@ margin-bottom: 40px;
     padding: 5px;
     text-align: center;
     transform: rotate(0turn);
-    transition: all 900ms ease-in-out ;
+    transition: all 500ms ease-in-out 200ms;
 }
 
 .restaurant__meal:hover .fa-check{
@@ -398,8 +425,13 @@ transform: rotate(1turn);
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 20%);  
     background: linear-gradient(to bottom right,#FF79DA,#9356DC);
     cursor: pointer;
+    transition: box-shadow 300ms ease-in-out;
 }
 
+.order:hover{
+    background: linear-gradient(to bottom right,rgba(255,121,218,0.9),rgba(147,86,220,0.9));
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 40%);
+}
 
 /* @ @ @ @ @ anim menu:start @ @ @ @ @ */
 
@@ -427,6 +459,9 @@ transform: rotate(1turn);
 }
 .restaurant__Starter .restaurant__meal:nth-child(5){
     animation-delay: 300ms;
+}
+.restaurant__Starter .restaurant__meal:nth-child(6){
+    animation-delay: 400ms;
 }
 .restaurant__MainDish .restaurant__meal:nth-child(3){/*mainDish arrive*/
     animation-delay: 600ms;
@@ -503,6 +538,7 @@ footer .fa-hands-helping{
     overflow: hidden;
     position: fixed;
     z-index: 10;  
+    /* cursor: wait; */
     animation: loaderLife 1s linear forwards; 
 
 }
