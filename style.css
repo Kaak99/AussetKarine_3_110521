@@ -1,6 +1,6 @@
 /*-----------------*/
-/*---           ---*/
-/*-----------------*/
+/*--- oh my food--*/
+/*----------------*/
 
 
 /*commentaire*/
@@ -58,10 +58,9 @@ body{
     background-color:white ;
 	color: black;
     font-family: 'Roboto', sans-serif;
-    /*font-family: 'Raleway', sans-serif;*/
     max-width: 1400px;
     margin: 0 auto;
-	border: solid 1px red;
+	/* border: solid 1px red; */
 }
 
 .indexNoLoader{
@@ -213,6 +212,10 @@ margin-bottom: 40px;
     border-radius: 20px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 18%);
     margin-bottom: 20px;
+}
+
+#restaurants figure:hover{
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 30%);
 }
 
 #restaurants figure img{
@@ -652,18 +655,65 @@ footer .fa-hands-helping{
 
 
 
-@media all and (max-width: 1200px) and (min-width:600px)
-{
-    /*general*/
-	/*header*/
-	/*main*/
+@media all and (min-width: 800px){	
+	/*main section  : howItWorks*/
+
+    #howItWorks ol{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #howItWorks ol li{
+        text-align: center;
+    }
+
+    /*main section  : restaurants*/
+    #restaurantsList{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 	/*footer*/
+    footer{
+        display: flex;
+        justify-content: space-around;
+    }  
+    footer h3{
+        width:20%;
+    }  
+    footer ul{
+        width:80%;
+        display: flex;
+        justify-content: space-around;
+    }  
+  
+    footer ul li{
+        width: auto;
+        text-align: center;
+    }
 }
 
-@media all and (max-width: 600px)
-{	/*general*/
-	/*header*/
-	/*main*/
-	/*footer*/
 
+
+@media all and (min-width: 1000px){
+    /*main section  : restaurants*/
+    #restaurantsList{
+        padding: 0 14% 0 14%;
+    } 
+}
+
+
+@media all and (min-width: 1200px) {     /*menu1 menu2 menu3 menu4*/
+    .restaurant__menu{
+        display: flex;
+    }
+    .restaurant__Starter{
+        width: 33%;
+    }
+    .restaurant__MainDish{
+        width: 33%;
+    }
+    .restaurant__Dessert{
+        width: 33%;
+    }
 }
