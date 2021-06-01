@@ -255,7 +255,7 @@ IMPOSSIBLE de l'afficher sans voir le plein dessous. Donc passer l'autre en abso
   background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-background-clip: text;
-  background-clip: text;
+  /*background-clip: text;*/
   color: transparent;
   position: absolute;
   opacity: 0;
