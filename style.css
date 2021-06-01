@@ -244,21 +244,19 @@ margin-bottom: 40px;
     font-size: 0.9rem;
     font-weight: 600;
     color:#008080;
-    animation: newFlash 1s infinite;
+    /* animation: newFlash 1s infinite; */
 }
 
-@keyframes newFlash{
+/* @keyframes newFlash{
     0%{opacity:100% }
     40%{opacity:67% }
     100%{opacity:100% }
-}
+} */
 
 #restaurantsList a:nth-child(3) .newLabel, #restaurantsList a:nth-child(4) .newLabel{
     display: none; 
 }
-/* #restaurants  .newLabel:nth-child(3) {
-    display: none;
-} */
+
 
 /* ne pas passer le vide (empty heart) en position absolute car va dessus mais reste transparent :
  IMPOSSIBLE de l'afficher sans voir le plein dessous. Donc passer l'autre en absolute*/
@@ -293,12 +291,20 @@ margin-bottom: 40px;
 .hearts:hover .fas.fa-heart{/*solidHeart*/
     animation: fasUP 1s both ;
 }
+
+.hearts:hover .far.fa-heart{/*emptyHeart*/
+    animation: farDown 1s both ;
+}
   
 @keyframes fasUP{
     20%{opacity:0.5;}
     100%{opacity:1;}
 }
-  
+
+@keyframes farDown{
+    20%{opacity:0.5;}
+    100%{opacity:0;}
+}
 
 /*<!-- === === ===  === === === section MENU#.HTML (menu1 menu2 menu3 menu4) === === ===  === === === -->*/
 
@@ -542,7 +548,7 @@ footer .fa-hands-helping{
     position: fixed;
     z-index: 10;  
     /* cursor: wait; */
-    animation: loaderLife 1s linear forwards; 
+    animation: loaderLife 2500ms linear forwards; 
 
 }
 
@@ -580,7 +586,7 @@ footer .fa-hands-helping{
 
 .loader-line-wrap {
     animation: 
-	spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite;
+	spin 1500ms cubic-bezier(.175, .885, .32, 1.275) infinite;
     box-sizing: border-box;
     height: 50px;
     left: 0;
