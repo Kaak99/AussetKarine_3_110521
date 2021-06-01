@@ -1,0 +1,290 @@
+/*----------------*/
+/*--- oh my food--*/
+/*------scss------*/
+/*----------------*/
+/* VAR */
+/*primary1*/
+/*primary2*/
+/*primary3*/
+/*searchBox color*/
+/*howItWorks:hover*/
+/*restaurantColor*/
+/*newLabel text color*/
+/* MIXIN */
+/* FONCTION */
+/* GENERAL */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.d-flex {
+  display: flex;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.6rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+/* <!--...................... BODY ......................--> */
+body {
+  background-color: white;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  /* border: solid 1px red; */
+}
+
+/* <!--...................... HEADER ......................--> */
+#logo {
+  justify-content: center;
+  padding: 30px 0 15px 0;
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#logoMenus {
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 14% 15px 0;
+}
+
+#logoMenus i {
+  font-size: 1.4rem;
+}
+
+/* <!--...................... MAIN ......................--> */
+/*<!--  section searchForm-->*/
+.searchForm {
+  width: 100%;
+  height: auto;
+  background-color: #eaeaea;
+  justify-content: center;
+}
+
+.searchForm i {
+  padding: 10px 15px 15px 80px;
+}
+
+.searchForm form input {
+  background-color: #eaeaea;
+  padding: 10px 5px 15px 5px;
+  font-size: 1rem;
+  border: none;
+}
+
+/*<!--  section headline-->*/
+.headline {
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 50px 0;
+  background-color: #f6f6f6;
+}
+
+.headline h1, .headline p {
+  padding: 5px 50px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.headline .button {
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 35px;
+  transition: box-shadow 300ms ease-in-out;
+  margin-top: 20px;
+  padding: 10px 8px;
+  width: 200px;
+}
+.headline .button:hover {
+  background: linear-gradient(to bottom right, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+/*<!--  section howItWorks-->*/
+#howItWorks h2 {
+  padding: 20px 20px;
+}
+
+#howItWorks ol {
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+#howItWorks ol li {
+  padding: 25px 30px;
+  margin: 10px 30px;
+  border-radius: 25px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.18);
+  position: relative;
+  cursor: default;
+}
+#howItWorks ol li:hover {
+  background-color: #f5edff;
+}
+#howItWorks ol li:hover i {
+  color: #9356DC;
+}
+#howItWorks ol li i {
+  margin-right: 16px;
+}
+#howItWorks ol li span {
+  background-color: #9356DC;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+  position: absolute;
+  left: -11px;
+  top: 25px;
+}
+
+/*<!--  section restaurants-->*/
+#restaurants {
+  padding: 40px 0 60px 0;
+  background-color: #f6f6f6;
+  flex-wrap: wrap;
+}
+#restaurants h2 {
+  padding: 20px 20px;
+}
+#restaurants figure {
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.18);
+  margin-bottom: 20px;
+}
+#restaurants figure:hover {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+}
+#restaurants figure img {
+  width: 338px;
+  height: 176px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+#restaurants figcaption {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 20px 10px;
+  position: relative;
+}
+
+.newLabel {
+  padding: 3px 10px;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  right: 12px;
+  bottom: 218px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #008080;
+}
+
+#restaurantsList {
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#restaurantsList a:nth-child(3) .newLabel {
+  display: none;
+}
+#restaurantsList a:nth-child(4) .newLabel {
+  display: none;
+}
+
+/* ne pas passer le vide (empty heart) en position absolute car va dessus mais reste transparent :
+IMPOSSIBLE de l'afficher sans voir le plein dessous. Donc passer l'autre en absolute*/
+.hearts {
+  color: black;
+  font-size: 1.7rem;
+  font-weight: 100;
+  opacity: 1;
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.hearts .far.fa-heart {
+  /*emptyHeart*/
+  opacity: 1;
+}
+.hearts .fas.fa-heart {
+  /*solidHeart*/
+  background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
+  background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: absolute;
+  opacity: 0;
+  left: 0px;
+  top: 2px;
+}
+.hearts:hover .fas.fa-heart {
+  /*solidHeart*/
+  animation: fasUP 1s both;
+}
+.hearts:hover .far.fa-heart {
+  /*emptyHeart*/
+  animation: farDown 1s both;
+}
+
+@keyframes fasUP {
+  20% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes farDown {
+  20% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

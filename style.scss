@@ -1,0 +1,306 @@
+/*----------------*/
+/*--- oh my food--*/
+/*------scss------*/
+/*----------------*/
+
+// body{
+// background: red;
+// }
+
+/* VAR */
+$color1:#9356DC;/*primary1*/
+$color2:#FF79DA;/*primary2*/
+$color3:#99E2D0;/*primary3*/
+$color4:#eaeaea;/*searchBox color*/
+$color5:#f5edff;/*howItWorks:hover*/
+$color6:#f6f6f6;/*restaurantColor*/
+$color7:#008080;/*newLabel text color*/
+$color9:black;
+$color10:white;
+
+$responsive1:800px;
+$responsive2:1000px;
+$responsive3:1200px;
+$responsive4:1400px;
+
+$fontName1:'Shrikhand';
+$fontName1b:cursive;
+$fontName2:'Roboto';
+$fontName2b:sans-serif;
+
+/* MIXIN */
+
+@mixin textStyle($fontSize,$fontWeight,$lineHeight){
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+@mixin buttons{
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  background: linear-gradient(to bottom right,$color2,$color1);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 20%);
+  border-radius: 35px;
+  transition: box-shadow 300ms ease-in-out;
+  &:hover{
+    background: linear-gradient(to bottom right,rgba(255,121,218,0.9),rgba(147,86,220,0.9));
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 40%); 
+  }
+}
+
+
+/* FONCTION */
+
+
+
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+.d-flex{display: flex;}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1{
+  @include textStyle(1.4rem,600,1.6rem)
+}
+h2{
+  @include textStyle(1.4rem,600,1.4rem)
+}
+h3{
+  @include textStyle(1.2rem,600,1.5rem)
+}
+p{
+  @include textStyle(1rem,100,1.4rem)
+}
+
+a{text-decoration: none;color:$color9}
+
+li{list-style: none;}
+
+
+
+/* <!--...................... BODY ......................--> */
+
+body{
+  background-color:$color10 ;
+  color: $color9;
+  font-family: $fontName2, $fontName2b;
+  max-width: $responsive4;
+  margin: 0 auto;
+/* border: solid 1px red; */
+}
+
+/* <!--...................... HEADER ......................--> */
+#logo{
+  justify-content: center;
+  padding: 30px 0 15px 0;
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 20%);
+}
+
+#logoMenus{
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 14% 15px 0;
+}
+
+
+#logoMenus i{
+font-size: 1.4rem;
+}
+
+/* <!--...................... MAIN ......................--> */
+
+/*<!--  section searchForm-->*/
+.searchForm{
+  width:100%; 
+  height:auto;
+  background-color:$color4;
+  justify-content:center;
+}
+.searchForm i{
+  padding: 10px 15px 15px 80px;
+}
+
+.searchForm form input{
+  background-color:$color4;
+  padding: 10px 5px 15px 5px;
+  font-size: 1rem;
+  border:none;
+}
+
+
+/*<!--  section headline-->*/
+.headline{
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 50px 0;
+  background-color:$color6;
+
+}
+.headline h1, .headline p{
+  padding: 5px 50px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.headline .button{
+  @include buttons;
+  margin-top: 20px;
+  padding: 10px 8px;
+  width:200px;
+}
+
+/*<!--  section howItWorks-->*/
+#howItWorks h2{
+  padding: 20px 20px;
+}
+
+#howItWorks ol{
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+  li{
+    padding: 25px 30px;
+    margin: 10px 30px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 18%);
+    position: relative;
+    cursor: default;
+    &:hover{
+      background-color:$color5;
+    }
+    &:hover i{
+      color: $color1;
+    }
+    i{
+      margin-right: 16px;
+    }
+    span{
+      background-color: $color1;
+      color: $color10;
+      padding: 3px 8px;
+      border-radius: 50%;
+      margin-right: 5px;
+      position: absolute;
+      left:-11px;
+      top: 25px;
+    }
+  }
+}
+
+
+/*<!--  section restaurants-->*/
+
+
+#restaurants{
+  padding: 40px 0 60px 0;
+  background-color:#f6f6f6;
+  flex-wrap: wrap;
+  h2{
+    padding: 20px 20px;
+  }
+  figure{
+    width: auto;
+    border-radius: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 18%);
+    margin-bottom: 20px;
+    &:hover{
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 30%);
+    }
+    img{
+      width: 338px;
+      height: 176px;
+      object-fit:cover;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+  }
+  figcaption{
+    justify-content: space-between;
+    align-items:center;
+    padding: 20px 0 20px 10px;
+    position: relative;
+  }
+}
+
+
+.newLabel{
+  padding: 3px 10px;
+  border-radius: 2px;
+  background-color: $color3;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 20%);
+  position: absolute;
+  right: 12px;
+  bottom: 218px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color:$color7;
+
+}
+
+#restaurantsList{
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  a:nth-child(3) .newLabel{
+    display: none; 
+  }
+  a:nth-child(4) .newLabel{
+    display: none; 
+  }
+}
+
+
+/* ne pas passer le vide (empty heart) en position absolute car va dessus mais reste transparent :
+IMPOSSIBLE de l'afficher sans voir le plein dessous. Donc passer l'autre en absolute*/
+
+
+.hearts {
+  color:black;
+  font-size:1.7rem;
+  font-weight:100;
+  opacity:1;
+  position: relative ;
+  cursor: pointer;
+  margin-right: 20px;
+  .far.fa-heart{/*emptyHeart*/
+    opacity:1;
+  }
+  .fas.fa-heart{/*solidHeart*/
+    background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
+    background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: absolute;
+    opacity:0;
+    left:0px ;
+    top:2px ;
+  }
+  &:hover .fas.fa-heart{/*solidHeart*/
+    animation: fasUP 1s both ;
+  }
+  &:hover .far.fa-heart{/*emptyHeart*/
+    animation: farDown 1s both ;
+  }
+}
+
+@keyframes fasUP{
+  20%{opacity:0.5;}
+  100%{opacity:1;}
+}
+
+@keyframes farDown{
+  20%{opacity:0.5;}
+  100%{opacity:0;}
+}
