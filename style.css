@@ -1,6 +1,6 @@
 /*----------------*/
 /*--- oh my food--*/
-/*------scss------*/
+/*----- scss -----*/
 /*----------------*/
 /* VAR */
 /*primary1*/
@@ -11,6 +11,9 @@
 /*restaurant bgColor*/
 /*newLabel text color*/
 /*footer bgcolor*/
+/*header logo*/
+/*width for @mediaqueries*/
+/*font family*/
 /* MIXIN */
 /* FONCTION */
 /* GENERAL */
@@ -137,6 +140,7 @@ body {
 }
 .headline .button:hover {
   background: linear-gradient(to bottom right, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  /*color2&color1*/
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -252,9 +256,10 @@ IMPOSSIBLE de l'afficher sans voir le plein dessous. Donc passer l'autre en abso
 }
 .hearts .fas.fa-heart {
   /*solidHeart*/
-  background: -webkit-linear-gradient(to bottom, #9356DC, #FF79DA);
+  /*background: -webkit-linear-gradient(to bottom, $color1,$color2);*/
   background-image: linear-gradient(to bottom, #9356DC, #FF79DA);
   -webkit-background-clip: text;
+  /*-moz-background-clip: text;*/
   /*background-clip: text;*/
   color: transparent;
   position: absolute;
@@ -301,6 +306,8 @@ footer h3 {
 }
 footer li {
   width: 200px;
+}
+footer li a {
   color: white;
   line-height: 1.6rem;
 }
@@ -399,7 +406,6 @@ footer .fa-hands-helping {
 }
 
 .fa-check {
-  /* display: inline-block; */
   font-size: 1rem;
   border-radius: 25px;
   color: #99E2D0;
@@ -437,6 +443,7 @@ footer .fa-hands-helping {
 }
 .order:hover {
   background: linear-gradient(to bottom right, rgba(255, 121, 218, 0.9), rgba(147, 86, 220, 0.9));
+  /*color2&color1*/
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -507,17 +514,16 @@ footer .fa-hands-helping {
 /*++++++++++++++++++++++++++++++++++++ LOADER ++++++++++++++++++++++++++++++++++++++*/
 .loader h4 {
   font-family: "Shrikhand", cursive;
-  color: rgba(147, 112, 219, 0.75);
-  font-size: 1.6rem;
+  color: #9356DC;
+  text-shadow: #FF79DA 0px 0px 2px;
+  font-size: 1.4rem;
   text-align: center;
   line-height: 10rem;
-  text-shadow: #d8f3ec 0px 2px 10px;
-  /*text-shadow: 1px 1px 2px #FF79DA, 0 0 1em #99E2D0, 0 0 0.2em #99E2D0;*/
 }
 
 .loader {
   width: 100%;
-  background: radial-gradient(#175042, #d8f3ec);
+  background: radial-gradient(#eaeaea, white);
   bottom: 0;
   left: 0;
   right: 0;
@@ -647,8 +653,20 @@ footer .fa-hands-helping {
   }
 }
 /*________________________________responsive _______ @media___________________________________________*/
+@media all and (max-width: 360px) {
+  /*<360w*/
+  /*<!--  section searchForm-->*/
+  .searchForm i {
+    padding: 10px 5px 15px 40px;
+  }
+
+  /*<!--  section restaurants-->*/
+  #restaurants figure img {
+    width: 280px;
+  }
+}
 @media all and (min-width: 800px) {
-  /*800*/
+  /*>800w*/
   /*main section  : howItWorks*/
   #howItWorks ol {
     flex-direction: row;
@@ -684,14 +702,14 @@ footer .fa-hands-helping {
   }
 }
 @media all and (min-width: 1000px) {
-  /*1000px*/
+  /*>1000w*/
   /*main section  : restaurants*/
   #restaurantsList {
     padding: 0 14% 0 14%;
   }
 }
 @media all and (min-width: 1200px) {
-  /*1200px*/
+  /*>1200w*/
   /*menu1 menu2 menu3 menu4*/
   .restaurant__menu {
     display: flex;
