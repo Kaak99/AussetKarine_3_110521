@@ -320,7 +320,7 @@ footer{
     margin-bottom: 10px;
   }
   li{
-    width: 200px;
+    width: 100%;
     a{
       color: $color10;
       line-height: 1.6rem;
@@ -565,7 +565,8 @@ footer{
   }
   100%{
       opacity:0;
-      transform:translateY(-100vh)
+      transform:translateY(-100vh)/*could have been done with z-index=0!*/
+      /*z-index: 0;*/
   }
 }
 
