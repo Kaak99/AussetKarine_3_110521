@@ -323,6 +323,8 @@ footer .fa-hands-helping {
 /*<!-- === === ===  === === === section MENU#.HTML (menu1 menu2 menu3 menu4) === === ===  === === === -->*/
 .restaurantCard {
   width: 100%;
+  background-color: #f6f6f6;
+  padding-bottom: 30px;
 }
 .restaurantCard img {
   width: 100%;
