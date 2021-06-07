@@ -12,10 +12,11 @@ $color4:#eaeaea;/*searchBox bgcolor*/
 $color5:#f5edff;/*howItWorks:hover*/
 $color6:#f6f6f6;/*restaurant bgColor*/
 $color7:#008080;/*newLabel text color*/
-$color8:#292421;/*footer bgcolor*/
+$color8:#353535;/*footer bgcolor*/
 $color9:black;
 $color10:white;
 $color11:#cfcfcf;/*header logo*/
+$color12:#f6f6f6;/*background menus.html&howitworks*/
 
 $responsive0:360px;/*width for @mediaqueries*/
 $responsive1:800px;
@@ -161,6 +162,7 @@ font-size: 1.4rem;
 }
 
 /*<!--  section howItWorks-->*/
+
 #howItWorks h2{
   padding: 20px 20px;
 }
@@ -173,6 +175,7 @@ font-size: 1.4rem;
     padding: 25px 30px;
     margin: 10px 30px;
     border-radius: 25px;
+    background-color: $color12;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 18%);
     position: relative;
     cursor: default;
@@ -354,8 +357,12 @@ footer{
   }
 }
 
+.restaurant__menu{
+  background-color: $color12;
+}
+
 .restaurant__Name{
-  background-color: white;
+  background-color: $color12;
   justify-content: space-evenly;
   padding:40px 0px;
   margin-top: -52px;
@@ -381,6 +388,7 @@ footer{
   overflow: hidden;
   margin: 0px 15px 15px 15px;
   border-radius: 20px;
+  background-color: $color10;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 20%); 
   cursor: pointer; 
   animation: apparition 400ms linear backwards;/*all menu appears with delai for each*/
@@ -565,7 +573,7 @@ footer{
   }
   100%{
       opacity:0;
-      transform:translateY(-100vh)/*could have been done with z-index=0!*/
+      transform:translateY(-100vh);/*could have been done with z-index=0!*/
       /*z-index: 0;*/
   }
 }

@@ -12,6 +12,7 @@
 /*newLabel text color*/
 /*footer bgcolor*/
 /*header logo*/
+/*background menus.html&howitworks*/
 /*width for @mediaqueries*/
 /*font family*/
 /* MIXIN */
@@ -158,6 +159,7 @@ body {
   padding: 25px 30px;
   margin: 10px 30px;
   border-radius: 25px;
+  background-color: #f6f6f6;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.18);
   position: relative;
   cursor: default;
@@ -294,7 +296,7 @@ IMPOSSIBLE de l'afficher sans voir le plein dessous. Donc passer l'autre en abso
 }
 /* <!--...................... FOOTER ......................--> */
 footer {
-  background-color: #292421;
+  background-color: #353535;
   padding: 20px 10px 40px 10px;
 }
 footer h3 {
@@ -334,8 +336,12 @@ footer .fa-hands-helping {
   margin-left: 15px;
 }
 
+.restaurant__menu {
+  background-color: #f6f6f6;
+}
+
 .restaurant__Name {
-  background-color: white;
+  background-color: #f6f6f6;
   justify-content: space-evenly;
   padding: 40px 0px;
   margin-top: -52px;
@@ -361,6 +367,7 @@ footer .fa-hands-helping {
   overflow: hidden;
   margin: 0px 15px 15px 15px;
   border-radius: 20px;
+  background-color: white;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   animation: apparition 400ms linear backwards;
@@ -551,6 +558,8 @@ footer .fa-hands-helping {
   100% {
     opacity: 0;
     transform: translateY(-100vh);
+    /*could have been done with z-index=0!*/
+    /*z-index: 0;*/
   }
 }
 .loader-inner {
